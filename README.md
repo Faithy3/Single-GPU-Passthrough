@@ -4,7 +4,10 @@ This guide is a modified version of the original, meant to be more of a quick-re
 
 ```sudo apt install libvirt-daemon qemu-kvm virt-manager ovmf```
 
+```yay -S virt-manager ovmf qemu```
+
 Kernel params are at /etc/kernelstub/configuration for pop, add intel_iommu=on. remember to change it on the global and not just the default!
+On Arch: `sudo nano /boot/loader/entries/arch.conf` or whatever it's named, add the kernel param
 
 ```sudo mkdir -p /etc/libvirt/hooks```
 
@@ -30,7 +33,7 @@ Make all folders that you need
 /etc/libvirt/hooks/qemu.d/$vmname/release/end/*
 ```
 
-The original hon's scripts, pci devices edited for my use case.
+The original scripts, without forbidden commands.
 
 Starting script
 
